@@ -75,33 +75,41 @@ Follow these steps to install and set up the SEAL environment:
    sudo apt-get install git build-essential cmake python3 python3-dev python3-pip
    
 2.Clone the repository:
+
 git clone https://github.com/Huelse/SEAL-Python.git
 cd SEAL-Python
 
 3.Install dependencies:
+
 pip3 install numpy pybind11
 
 4.Initialize the SEAL and pybind11 submodules:
+
 git submodule update --init --recursive
 
 5.Build the SEAL library without msgsl, zlib, and zstandard compression:
+
 cd SEAL
 cmake -S . -B build -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF -DSEAL_USE_ZSTD=OFF
 cmake --build build
 cd ..
 
 6.Generate the dynamic library:
+
 python3 setup.py build_ext -i
 
 7.Usage
+
 After setting up the environment, you can use the SEAL library in your Python projects. The dynamic library generated will be in the current directory.
 
 8.Testing
+
 To test the SEAL library, run the following commands:
 cp seal.*.so examples
 cd examples
 python3 4_bgv_basics.py
 
 9.Acknowledgments
+
 Microsoft for developing the SEAL library.
 The contributors to the SEAL-Python project for making the Python bindings available.
