@@ -93,15 +93,15 @@ cd ..
 6.Generate the dynamic library:
 python3 setup.py build_ext -i
 
-Usage
+7.Usage
 After setting up the environment, you can use the SEAL library in your Python projects. The dynamic library generated will be in the current directory.
 
-Testing
+8.Testing
 To test the SEAL library, run the following commands:
 cp seal.*.so examples
 cd examples
 python3 4_bgv_basics.py
 
-Acknowledgments
+9.Acknowledgments
 Microsoft for developing the SEAL library.
 The contributors to the SEAL-Python project for making the Python bindings available.
